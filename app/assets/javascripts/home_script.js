@@ -32,7 +32,7 @@ $(document).ready(function(){
         };
     	});
     	$(window).on("swiperight", function(event){
-        if($(".active").first().attr("id") != $("#contents .main_div:last-child").attr("id")){
+        if($(".active").first().attr("id") != $("#contents").find(".main_div").last().attr("id")){
           $(".active").toggle();
           $(".active").removeClass("active").next().addClass("active");
           $(".active").toggle();
