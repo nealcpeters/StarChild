@@ -65,9 +65,9 @@ $(document).ready(function(){
 
   var sunOrbitingGalaxy = energyCalculation(mass, 792000);
   
-  $('#earthRotating').find('p').text(earthRotating);
-  $('#earthOrbitingSun').find('p').text(earthOrbitingSun);
-  $('#sunOrbitingGalaxy').find('p').text(sunOrbitingGalaxy);
+  $('#earthRotating').find('p').text(earthRotating + " joules");
+  $('#earthOrbitingSun').find('p').text(earthOrbitingSun + " joules");
+  $('#sunOrbitingGalaxy').find('p').text(sunOrbitingGalaxy + " joules");
 
   // answers are in Joules
 });

@@ -12,7 +12,6 @@ $(document).ready(function(){
     S : 0.002,
     Cl : 0.002,
     Ca : 0.015,
-
     Fe : 0.0005
   };
 
