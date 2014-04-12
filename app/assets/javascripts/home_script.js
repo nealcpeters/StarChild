@@ -12,12 +12,8 @@ $(document).ready(function(){
       url: '/stats/create',
       data: $("form").serialize(),
       success: function(response) {
-      	if(response["stats"]["gender"] == 0){
-      		var gender = "Male";
-      	} else {
-      		var gender = "Female";
-      	};
-      	$("#contents").html('<h1>Your Results</h1><p>height: ' + response["stats"]["height"] + '</p><p>weight: ' + response["stats"]["weight"] + '</p><p> gender: ' + gender +  '</p><p>age: ' + response["stats"]["age"] + '</p><p>location: ' + response["stats"]["location"] + '</p>');
+      	$("#contents").html(response);
+      	$("#base_results").toggle();
       }
     });
 	});
