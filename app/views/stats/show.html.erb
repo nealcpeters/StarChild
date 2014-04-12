@@ -1,10 +1,23 @@
 <h1>Your Results</h1>
 
-<div>height: <%= @stats.height %></div>
-<div>weight: <%= @stats.weight %></div>
+
+<div>
+  height: <span id="height"><%= @stats.height %></span>
+</div>
+
+<div>
+  weight: <span id="weight"><%= @stats.weight %></span>
+</div>
+
 <div>
   <%= "gender: Male" if @stats.gender == "0" %>
   <%= "gender: Female" if @stats.gender == "1" %>
 </div>
-<div>age: <%= @stats.age %></div>
-<div>location: <%= @stats.location %></div>
+
+<div>
+  age: <span id="age"><%= @stats.age %></span>
+</div>
+
+<div>
+  location: <span id="age"><%= @stats.location %></span>
+</div>
