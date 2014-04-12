@@ -12,6 +12,4 @@ class StatsController < ApplicationController
   def show
     @stats = Stats.find(params[:id])   
   end
-
-
 end
