@@ -64,7 +64,7 @@ $(document).ready(function(){
   var earthOrbitingSun = energyCalculation(mass, 107000);
 
   var sunOrbitingGalaxy = energyCalculation(mass, 792000);
-  
+  console.log(sunOrbitingGalaxy)
   $('#earthRotating').find('p').text(earthRotating + " joules");
       joulesToGallonOfGasEarthRotating = joulesToGallonOfGas(earthRotating);
       $('#joulesToGallonOfGasEarthRotating').find('p').text(joulesToGallonOfGasEarthRotating + " Gallons of Gas");
@@ -90,7 +90,51 @@ $(document).ready(function(){
       $('#joulesToHoppingFleeEarthRotating').find('p').text(joulesToHoppingFleeEarthRotating + " Hopping Flees");
 
   $('#earthOrbitingSun').find('p').text(earthOrbitingSun + " joules");
+      joulesToGallonOfGasEarthOrbiting = joulesToGallonOfGas(earthOrbitingSun);
+      $('#joulesToGallonOfGasEarthOrbiting').find('p').text(joulesToGallonOfGasEarthOrbiting + " Gallons of Gas");
+      joulesAABatteryEarthOrbiting = joulesToAABattery(earthOrbitingSun);
+      $('#joulesToAABatteryEarthOrbiting').find('p').text(joulesAABatteryEarthOrbiting + " AA Batteries");
+      joulesCandyBarEarthOrbiting = joulesToCandyBar(earthOrbitingSun);
+      $('#joulesToCandyBarEarthOrbiting').find('p').text(joulesCandyBarEarthOrbiting + " Candy Bars");
+      joulesKgOfCoalEarthOrbiting = joulesToKgOfCoal(earthOrbitingSun);
+      $('#joulesToKgOfCoalEarthOrbiting').find('p').text(joulesKgOfCoalEarthOrbiting + "kg of Coal");
+       joulesKgOfUraniumEarthOrbiting = joulesToKgOfUranium(earthOrbitingSun);
+      $('#joulesToKgOfUraniumEarthOrbiting').find('p').text(joulesKgOfUraniumEarthOrbiting + "kg of Uranium");
+      joulesFoodCaloriesEarthOrbiting = joulesToFoodCalories(earthOrbitingSun);
+      $('#joulesToFoodCaloriesEarthOrbiting').find('p').text(joulesFoodCaloriesEarthOrbiting + " Food Calories");
+      joulesToHiroshimaEarthOrbiting = joulesToHiroshima(earthOrbitingSun);
+      $('#joulesToHiroshimaEarthOrbiting').find('p').text(joulesToHiroshimaEarthOrbiting + " Hiroshima Atom Bombs");
+      joulesToLighteningBoltEarthOrbiting = joulesToLighteningBolt(earthOrbitingSun);
+      $('#joulesToLighteningBoltEarthOrbiting').find('p').text(joulesToLighteningBoltEarthOrbiting + " Lightening Bolts");
+      joulesToSaturnVEarthOrbiting = joulesToSaturnV(earthOrbitingSun);
+      $('#joulesToSturnVEarthOrbiting').find('p').text(joulesToSaturnVEarthOrbiting + " Saturn V rockets");
+      joulesToKgOfTNTEarthOrbiting = joulesToKgOfTNT(earthOrbitingSun);
+      $('#joulesToKgOfTNTEarthOrbiting').find('p').text(joulesToKgOfTNTEarthOrbiting + "kg of TNT");
+      joulesToHoppingFleeEarthOrbiting = joulesToHoppingFlee(earthOrbitingSun);
+      $('#joulesToHoppingFleeEarthOrbiting').find('p').text(joulesToHoppingFleeEarthOrbiting + " Hopping Flees");
+ 
   $('#sunOrbitingGalaxy').find('p').text(sunOrbitingGalaxy + " joules");
-
+      joulesToGallonOfGasSunOrbiting = joulesToGallonOfGas(sunOrbitingGalaxy);
+      $('#joulesToGallonOfGasSunOrbiting').find('p').text(joulesToGallonOfGasSunOrbiting + " Gallons of Gas");
+      joulesAABatterySunOrbiting = joulesToAABattery(sunOrbitingGalaxy);
+      $('#joulesToAABatterySunOrbiting').find('p').text(joulesAABatteryEarthRoating + " AA Batteries");
+      joulesCandyBarSunOrbiting = joulesToCandyBar(sunOrbitingGalaxy);
+      $('#joulesToCandyBarSunOrbiting').find('p').text(joulesCandyBarSunOrbiting + " Candy Bars");
+      joulesKgOfCoalSunOrbiting = joulesToKgOfCoal(sunOrbitingGalaxy);
+      $('#joulesToKgOfCoalSunOrbiting').find('p').text(joulesKgOfCoalSunOrbiting + "kg of Coal");
+       joulesKgOfUraniumSunOrbiting = joulesToKgOfUranium(sunOrbitingGalaxy);
+      $('#joulesToKgOfUraniumSunOrbiting').find('p').text(joulesKgOfUraniumEarthRoating + "kg of Uranium");
+      joulesFoodCaloriesSunOrbiting = joulesToFoodCalories(sunOrbitingGalaxy);
+      $('#joulesToFoodCaloriesSunOrbiting').find('p').text(joulesFoodCaloriesSunOrbiting + " Food Calories");
+      joulesToHiroshimaSunOrbiting = joulesToHiroshima(sunOrbitingGalaxy);
+      $('#joulesToHiroshimaSunOrbiting').find('p').text(joulesToHiroshimaSunOrbiting + " Hiroshima Atom Bombs");
+      joulesToLighteningBoltSunOrbiting = joulesToLighteningBolt(sunOrbitingGalaxy);
+      $('#joulesToLighteningBoltSunOrbiting').find('p').text(joulesToLighteningBoltSunOrbiting + " Lightening Bolts");
+      joulesToSaturnVSunOrbiting = joulesToSaturnV(sunOrbitingGalaxy);
+      $('#joulesToSturnVSunOrbiting').find('p').text(joulesToSaturnVSunOrbiting + " Saturn V rockets");
+      joulesToKgOfTNTSunOrbiting = joulesToKgOfTNT(sunOrbitingGalaxy);
+      $('#joulesToKgOfTNTSunOrbiting').find('p').text(joulesToKgOfTNTSunOrbiting + "kg of TNT");
+      joulesToHoppingFleeSunOrbiting = joulesToHoppingFlee(sunOrbitingGalaxy);
+      $('#joulesToHoppingFleeSunOrbiting').find('p').text(joulesToHoppingFleeSunOrbiting + " Hopping Flees");
   // answers are in Joules
 });
