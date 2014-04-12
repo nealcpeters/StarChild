@@ -1,0 +1,10 @@
+<h1>Your Results</h1>
+
+<div>height: <%= @stats.height %></div>
+<div>weight: <%= @stats.weight %></div>
+<div>
+  <%= "gender: Male" if @stats.gender == "0" %>
+  <%= "gender: Female" if @stats.gender == "1" %>
+</div>
+<div>age: <%= @stats.age %></div>
+<div>location: <%= @stats.location %></div>

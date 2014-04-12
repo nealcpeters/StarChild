@@ -1,10 +1,10 @@
 <h1>Home</h1>
 
-<%= form_tag("/", method: :post) do %>
-  <%= date_field(:user, :born_on) %><br>
-  <%= text_field_tag(:location, "Location") %><br>  
+<%= form_tag("/stats/create", method: :post) do %>
   <%= text_field_tag(:height, "Height") %><br>
   <%= text_field_tag(:weight, "Weight") %><br>
+  <%= text_field_tag(:age, "age") %><br>
+  <%= text_field_tag(:location, "Location") %><br>  
   <%= radio_button_tag(:gender, "Male") %>
   <%= label_tag(:gender_male, "Male") %>
   <%= radio_button_tag(:gender, "Female") %>
