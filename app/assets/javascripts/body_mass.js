@@ -66,6 +66,10 @@ $(document).ready(function(){
   var sunOrbitingGalaxy = energyCalculation(mass, 792000);
   
   $('#earthRotating').find('p').text(earthRotating + " joules");
+      joulesToGallonOfGasEarthRotating = joulesToGallonOfGas(earthRotating);
+      $('#joulesToGallonOfGasEarthRotating').find('p').text(joulesToGallonOfGasEarthRotating + " Gallons of Gas");
+      joulesAABatteryEarthRoating = joulesToAABattery(earthRotating);
+      $('#joulesToAABatteryEarthRotating').find('p').text(joulesAABatteryEarthRoating + " AA Batteries");
   $('#earthOrbitingSun').find('p').text(earthOrbitingSun + " joules");
   $('#sunOrbitingGalaxy').find('p').text(sunOrbitingGalaxy + " joules");
 

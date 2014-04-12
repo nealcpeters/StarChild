@@ -22,9 +22,8 @@
   location: <span id="age"><%= @stats.location %></span>
 </div>
 
-<div id="earthRotating">
-  Your Energy Due to Eart Rotating:
-  <p></p>
+<div id="earth_rotating">
+  <%= render partial: ('energy_cause_earth_rotates') %>
 </div>
 
 <div id="earthOrbitingSun">
@@ -37,113 +36,10 @@
   <p></p>
 </div>
 
-
-<div id="hPercentageMilkyWay">
-  Comparison of your Hydrogen Composition to the Milky Way:
-  <p></p>
+<div id="comparisons">
+  <%= render partial: ('composition_comparisons') %>
 </div>
 
-<div id="hPercentageSolarSystem">
-  Comparison of your Hydrogen Composition to the Solar System:
-  <p></p>
-</div>
-
-<div id="cTimesMilkyWay">
-  Comparison of your Carbon Composition to the Milky Way:
-  <p></p>
-</div>
-
-<div id="cTimesSolarSystem">
-  Comparison of your Carbon Composition to the Solar System:
-  <p></p>
-</div>
-
-<div id="nTimesMilkyWay">
-  Comparison of your Nitrogen Composition to the Milky Way:
-  <p></p>
-</div>
-
-<div id="nTimesSolarSystem">
-  Comparison of your Nitrogen Composition to the Solar System:
-  <p></p>
-</div>
-
-<div id="oTimesMilkyWay">
-  Comparison of your Oxygen Composition to the Milky Way:
-  <p></p>
-</div>
-
-<div id="oTimesSolarSystem">
-  Comparison of your Oxygen Composition to the Solar System:
-  <p></p>
-</div>
-
-<div id="oTimesEarth">
-  Comparison of your Oxygen Composition to the Earth:
-  <p></p>
-</div>
-
-<div id="mgPercentageEarth">
-  Comparison of your Magnesium Composition to the Earth:
-  <p></p>
-</div>
-
-<div id="sPercentageEarth">
-  Comparison of your Silcon Composition to the Earth:
-  <p></p>
-</div>
-
-<div id="caPercentageEarth">
-  Comparison of your Calcium Composition to the Milky Way:
-  <p></p>
-</div>
-
-<div id="fePercentageMilkyWay">
-  Comparison of your Calcium Composition to the Milky Way:
-  <p></p>
-</div>
-
-<div id="fePercentageEarth">
-  Comparison of your Calcium Composition to the Milky Way:
-  <p></p>
-</div>
-
-<div id="mercuryAge">
-  Your Age on Mercury:
-  <p></p>
-</div>
-
-<div id="venusAge">
-  Your Age on Venus:
-  <p></p>
-</div>
-
-<div id="marsAge">
-  Your Age on Mars:
-  <p></p>
-</div>
-
-<div id="jupiterAge">
-  Your Age on Jupiter:
-  <p></p>
-</div>
-
-<div id="saturnAge">
-  Your Age on saturn:
-  <p></p>
-</div>
-
-<div id="uranusAge">
-  Your Age on uranus:
-  <p></p>
-</div>
-
-<div id="neptuneAge">
-  Your Age on neptune:
-  <p></p>
-</div>
-
-<div id="plutoAge">
-  Your Age on pluto:
-  <p></p>
+<div id="planetary_ages">
+  <%= render partial: ('planetary_age') %>
 </div>
