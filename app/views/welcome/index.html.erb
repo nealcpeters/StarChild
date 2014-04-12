@@ -1,5 +1,12 @@
 <h1>Home</h1>
 
 <%= form_tag("/", method: :post) do %>
-  <%= submit_tag("Tell Me!")%>
+  <%= date_field(:user, :born_on) %><br>
+  <%= text_field_tag(:height, "Height") %><br>
+  <%= text_field_tag(:weight, "Weight") %><br>
+  <%= radio_button_tag(:gender, "Male") %>
+  <%= label_tag(:gender_male, "Male") %>
+  <%= radio_button_tag(:gender, "Female") %>
+  <%= label_tag(:gender_female, "Female") %><br>
+  <%= submit_tag("Tell Me!")%><br>
 <% end %>
