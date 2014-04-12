@@ -45,15 +45,15 @@ $(document).ready(function(){
     return energy / Math.pow(10,10);
   };
 
-  var joulesSaturnV = function(energy) {
+  var joulesToSaturnV = function(energy) {
     return energy / Math.pow(10,11);
   };
 
-  var joulesKgOfTNT = function(energy) {
+  var joulesToKgOfTNT = function(energy) {
     return energy / Math.pow(10,6);
   };
 
-  var joulesHoppingFlee = function(energy) {
+  var joulesToHoppingFlee = function(energy) {
     return energy / Math.pow(10,-7);
   };
 
@@ -70,6 +70,25 @@ $(document).ready(function(){
       $('#joulesToGallonOfGasEarthRotating').find('p').text(joulesToGallonOfGasEarthRotating + " Gallons of Gas");
       joulesAABatteryEarthRoating = joulesToAABattery(earthRotating);
       $('#joulesToAABatteryEarthRotating').find('p').text(joulesAABatteryEarthRoating + " AA Batteries");
+      joulesCandyBarEarthRoating = joulesToCandyBar(earthRotating);
+      $('#joulesToCandyBarEarthRotating').find('p').text(joulesCandyBarEarthRoating + " Candy Bars");
+      joulesKgOfCoalEarthRoating = joulesToKgOfCoal(earthRotating);
+      $('#joulesToKgOfCoalEarthRotating').find('p').text(joulesKgOfCoalEarthRoating + "kg of Coal");
+       joulesKgOfUraniumEarthRoating = joulesToKgOfUranium(earthRotating);
+      $('#joulesToKgOfUraniumEarthRotating').find('p').text(joulesKgOfUraniumEarthRoating + "kg of Uranium");
+      joulesFoodCaloriesEarthRoating = joulesToFoodCalories(earthRotating);
+      $('#joulesToFoodCaloriesEarthRotating').find('p').text(joulesFoodCaloriesEarthRoating + " Food Calories");
+      joulesToHiroshimaEarthRoating = joulesToHiroshima(earthRotating);
+      $('#joulesToHiroshimaEarthRoating').find('p').text(joulesToHiroshimaEarthRoating + " Hiroshima Atom Bombs");
+      joulesToLighteningBoltEarthRotating = joulesToLighteningBolt(earthRotating);
+      $('#joulesToLighteningBoltEarthRotating').find('p').text(joulesToLighteningBoltEarthRotating + " Lightening Bolts");
+      joulesToSaturnVEarthRotating = joulesToSaturnV(earthRotating);
+      $('#joulesToSturnVEarthRotating').find('p').text(joulesToSaturnVEarthRotating + " Saturn V rockets");
+      joulesToKgOfTNTEarthRotating = joulesToKgOfTNT(earthRotating);
+      $('#joulesToKgOfTNTEarthRotating').find('p').text(joulesToKgOfTNTEarthRotating + "kg of TNT");
+      joulesToHoppingFleeEarthRotating = joulesToHoppingFlee(earthRotating);
+      $('#joulesToHoppingFleeEarthRotating').find('p').text(joulesToHoppingFleeEarthRotating + " Hopping Flees");
+
   $('#earthOrbitingSun').find('p').text(earthOrbitingSun + " joules");
   $('#sunOrbitingGalaxy').find('p').text(sunOrbitingGalaxy + " joules");
 
