@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
 
   def results
     
+    Stats.create()
   end
 
 end
