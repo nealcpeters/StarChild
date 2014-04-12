@@ -1,0 +1,34 @@
+<div id="base_results">
+	<div>
+	  height: <span id="height"><%= @stats.height %></span>
+	</div>
+
+	<div>
+	  weight: <span id="weight"><%= @stats.weight %></span>
+	</div>
+
+	<div>
+	  <%= "gender: Male" if @stats.gender == "0" %>
+	  <%= "gender: Female" if @stats.gender == "1" %>
+	</div>
+
+	<div>
+	  age: <span id="age"><%= @stats.age %></span>
+	</div>
+
+	<div>
+	  location: <span id="age"><%= @stats.location %></span>
+	</div>
+</div>
+
+<div id="planetary_age">
+	<%= render partial: "planetary_age" %>
+</div>
+
+<div id="energy_cause_earth_rotates">
+	<%= render partial: "energy_cause_earth_rotates" %>
+</div>
+
+<div id="composition_comparisons">
+	<%= render partial: "composition_comparisons" %>
+</div>
