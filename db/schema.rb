@@ -11,9 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140412165214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "stats", force: true do |t|
+    t.integer "height"
+    t.integer "weight"
+    t.integer "age"
+    t.string  "location"
+    t.binary  "gender"
+  end
 
 end
