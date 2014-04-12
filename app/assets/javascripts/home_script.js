@@ -13,7 +13,9 @@ $(document).ready(function(){
       data: $("form").serialize(),
       success: function(response) {
       	$("#contents").html(response);
-      	$("#base_results").toggle();
+      	$("#contents").children().toggle();
+        $("#contents .main_div:nth-child(2)").addClass("active");
+        $(".active").toggle();
       }
     });
 	});
@@ -21,20 +23,24 @@ $(document).ready(function(){
 	enquire.register("screen and (max-width:45em)", {
 
     match : function() {
-    	console.log("mobile!")
     	// $(".navbutton").toggle();  this will make our desktop nav buttons disappear
     	$(window).on("swipeleft", function(event){
-    		// go to the previous slide
-    		console.log("swiping left!");
+    		if($(".active").first().attr("id") != $("#contents .main_div:nth-child(2)").attr("id")){
+          $(".active").toggle();
+          $(".active").removeClass("active").prev().addClass("active");
+          $(".active").toggle();
+        };
     	});
     	$(window).on("swiperight", function(event){
-    		// go to the next slide
-    		console.log("swiping right!");
+        if($(".active").first().attr("id") != $("#contents .main_div:last-child").attr("id")){
+          $(".active").toggle();
+          $(".active").removeClass("active").next().addClass("active");
+          $(".active").toggle();
+        };
     	});
     },
                                 
     unmatch : function() {
-    	console.log("desktop!");
     	$(".navbutton").toggle();
     	$(window).unbind("swipeleft");
     	$(window).unbind("swiperight");
