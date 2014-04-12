@@ -14,10 +14,17 @@ $(document).ready(function(){
 	  console.log(location);
 	  $.ajax({
       type: 'post',
-      url: '/',
+      url: '/stats/create',
       data: $("form").serialize(),
       success: function(response) {
       	console.log("makin' it happen!");
+      	console.log(response);
+      	if(response["stats"]["gender"] == 0){
+      		var gender = "Male";
+      	} else {
+      		var gender = "Female";
+      	};
+      	$("#contents").html('<h1>Your Results</h1><p>height: ' + response["stats"]["height"] + '</p><p>weight: ' + response["stats"]["weight"] + '</p><p> gender: ' + gender +  '</p><p>age: ' + response["stats"]["age"] + '</p><p>location: ' + response["stats"]["location"] + '</p>');
       }
     });
 	});
