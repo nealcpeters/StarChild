@@ -2,9 +2,9 @@
 
 <div id="contents">
 	<%= form_tag("/stats/create", method: :post) do %>
-	  <%= text_field_tag :weight, nil, placeholder: "Weight in pounds" %><br>
-	  <%= text_field_tag :age, nil, placeholder: "Age" %><br>
-	  <%= text_field_tag :location, nil, placeholder: "Location" %><br>
-	  <%= submit_tag("Tell Me!")%><br>
+	  <%= text_field_tag :weight, "140", placeholder: "Weight" %><br>
+	  <%= text_field_tag :age, "30", placeholder: "age" %><br>
+	  <%= text_field_tag :location, "Eau Claire, WI", placeholder: "Location" %><br>  
+	  <%= submit_tag("MAKE ME STARSTUFF!")%><br>
 	<% end %>
 </div>
