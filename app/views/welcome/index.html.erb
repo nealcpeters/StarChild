@@ -2,6 +2,7 @@
 
 <%= form_tag("/", method: :post) do %>
   <%= date_field(:user, :born_on) %><br>
+  <%= text_field_tag(:location, "Location") %><br>  
   <%= text_field_tag(:height, "Height") %><br>
   <%= text_field_tag(:weight, "Weight") %><br>
   <%= radio_button_tag(:gender, "Male") %>
