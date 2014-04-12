@@ -1,13 +1,15 @@
 <h1>Home</h1>
 
-<%= form_tag("/stats/create", method: :post) do %>
-  <%= text_field_tag(:height, "Height") %><br>
-  <%= text_field_tag(:weight, "Weight") %><br>
-  <%= text_field_tag(:age, "age") %><br>
-  <%= text_field_tag(:location, "Location") %><br>  
-  <%= radio_button_tag(:gender, "Male") %>
-  <%= label_tag(:gender_male, "Male") %>
-  <%= radio_button_tag(:gender, "Female") %>
-  <%= label_tag(:gender_female, "Female") %><br>
-  <%= submit_tag("Tell Me!")%><br>
-<% end %>
+<div id="contents">
+	<%= form_tag("/stats/create", method: :post) do %>
+	  <%= text_field_tag(:height, "Height") %><br>
+	  <%= text_field_tag(:weight, "Weight") %><br>
+	  <%= text_field_tag(:age, "age") %><br>
+	  <%= text_field_tag(:location, "Location") %><br>  
+	  <%= radio_button_tag(:gender, "Male") %>
+	  <%= label_tag(:gender_male, "Male") %>
+	  <%= radio_button_tag(:gender, "Female") %>
+	  <%= label_tag(:gender_female, "Female") %><br>
+	  <%= submit_tag("Tell Me!")%><br>
+	<% end %>
+</div>
