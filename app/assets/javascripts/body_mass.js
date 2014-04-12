@@ -4,8 +4,13 @@ $(document).ready(function(){
 
   var weight = $('#weight').text();
   var mass = weight / 2.2;
-
-  // You on planet but planet is moving
+  var latitude = $('#location').text().match(/\d*\.\d*/);
+  if(latitude === null) {
+    var latitudeAdjuster = Math.cos(latitude * 0.01745);
+    }
+  else {
+    var latitudeAdjuster = 1
+  }
 
   var energyCalculation = function(mass, velocity){
     var velocityMpS = velocity / 3.6;
@@ -59,12 +64,13 @@ $(document).ready(function(){
 
   // Come back and add latitude
   // 
-  var earthRotating = energyCalculation(mass, 1600);
+  var earthRotating = energyCalculation(mass, 1600 * latitudeAdjuster);
 
   var earthOrbitingSun = energyCalculation(mass, 107000);
 
   var sunOrbitingGalaxy = energyCalculation(mass, 792000);
-  console.log(sunOrbitingGalaxy)
+  
+
   $('#earthRotating').find('p').text(earthRotating + " joules");
       joulesToGallonOfGasEarthRotating = joulesToGallonOfGas(earthRotating);
       $('#joulesToGallonOfGasEarthRotating').find('p').text(joulesToGallonOfGasEarthRotating + " Gallons of Gas");

@@ -17,6 +17,10 @@
 	</div>
 
 	<div>
+	  location: <span id="location"><%= @stats.location %></span>
+	</div>
+
+	<div>
 	  location: <span id="age"><%= @stats.location %></span>
 	</div>
 </div>
@@ -25,10 +29,22 @@
 	<%= render partial: "planetary_age" %>
 </div>
 
+<div id="life_star_range" class="main_div">
+	<%= render partial: "stars_in_life_range" %>
+</div>
+
 <div id="energy_cause_earth_rotates" class="main_div">
 	<%= render partial: "energy_cause_earth_rotates" %>
 </div>
 
-<div id="composition_comparisons" class="main_div">
+<div id="energy_cause_earth_orbits" class="main_div">
+	<%= render partial: "energy_cause_earth_orbits" %>
+</div>
+
+<div id="energy_cause_sun_orbits" class="main_div">
+	<%= render partial: "energy_cause_sun_orbits" %>
+</div>
+
+<div id="composition_comparisons" class="main div">
 	<%= render partial: "composition_comparisons" %>
 </div>
