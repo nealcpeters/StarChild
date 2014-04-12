@@ -2,14 +2,14 @@
 
 <div id="contents">
 	<%= form_tag("/stats/create", method: :post) do %>
-	  <%= text_field_tag(:height, "Height") %><br>
-	  <%= text_field_tag(:weight, "Weight") %><br>
-	  <%= text_field_tag(:age, "age") %><br>
-	  <%= text_field_tag(:location, "Location") %><br>  
-	  <%= radio_button_tag(:gender, "Male") %>
-	  <%= label_tag(:gender_male, "Male") %>
-	  <%= radio_button_tag(:gender, "Female") %>
-	  <%= label_tag(:gender_female, "Female") %><br>
+	  <%= text_field_tag :height, nil, placeholder: "Height" %><br>
+	  <%= text_field_tag :weight, nil, placeholder: "Weight" %><br>
+	  <%= text_field_tag :age, nil, placeholder: "age" %><br>
+	  <%= text_field_tag :location, nil, placeholder: "Location" %><br>  
+	  <%= radio_button_tag :gender, "Male" %>
+	  <%= label_tag :gender_male, "Male" %>
+	  <%= radio_button_tag :gender, "Female" %>
+	  <%= label_tag :gender_female, "Female" %><br>
 	  <%= submit_tag("Tell Me!")%><br>
 	<% end %>
 </div>
