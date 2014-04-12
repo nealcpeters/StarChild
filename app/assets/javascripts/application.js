@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+
+$("form").on("submit", function(event){
+	event.preventDefault();
+	var height = $("input[name='height']").val();
+	var weight = $("input[name='weight']").val();
+	var age = $("input[name='age']").val();
+	var gender = $("input[name='gender']").val();
+	
+})
+
+});
