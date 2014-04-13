@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $(".nav_button").toggle();
+
 	$("form").on("submit", function(event){
 	  event.preventDefault();
 	  var height = $("input[name='height']").val();
