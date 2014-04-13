@@ -17,7 +17,6 @@ $(document).ready(function(){
       	$("#contents").html(response);
         $("#contents").css("display", "inline-block");
       	$("#contents").children().toggle();
-        console.log(response);
         $("#contents .main_div:nth-child(2)").addClass("active");
         $(".active").toggle();
         showNavIfDesktop();
