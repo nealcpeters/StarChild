@@ -16,6 +16,7 @@ $(document).ready(function(){
       	$("#contents").children().toggle();
         $("#contents .main_div:nth-child(2)").addClass("active");
         $(".active").toggle();
+        showNavIfDesktop();
       }
     });
 	});
@@ -23,7 +24,6 @@ $(document).ready(function(){
 	enquire.register("screen and (max-width:45em)", {
 
     match : function() {
-    	// $(".navbutton").toggle();  this will make our desktop nav buttons disappear
     	$(window).on("swipeleft", function(event){
     		if($(".active").first().attr("id") != $("#contents .main_div:nth-child(2)").attr("id")){
           $(".active").toggle();
@@ -41,12 +41,30 @@ $(document).ready(function(){
     },
                                 
     unmatch : function() {
-    	$(".navbutton").toggle();
+    	if($(".active").first().attr("id")){
+        $(".nav_button").toggle();
+      };
     	$(window).unbind("swipeleft");
     	$(window).unbind("swiperight");
     }       
 	});
 
+  enquire.register("screen and (min-width:45em)", {
+
+    match : function() {
+      desktop = "true";
+    },
+                                
+    unmatch : function() {
+      $(".nav_button").css("display", "none");
+    }       
+  });
+
+  function showNavIfDesktop(){
+    if(desktop){
+      $(".nav_button").toggle()
+    };
+  };
 
 
 
