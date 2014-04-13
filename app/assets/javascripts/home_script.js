@@ -50,6 +50,14 @@ $(document).ready(function(){
 
     match : function() {
       desktop = "true";
+      $(document).keydown(function(e){
+        if (e.keyCode == 37) {
+          previousDivDesktop();
+        } else if (e.keyCode == 39) {
+          nextDivDesktop();
+        }
+      });
+
       $("#left_button > img").on("click", function(event){
         previousDivDesktop();
       });
