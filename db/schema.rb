@@ -17,11 +17,9 @@ ActiveRecord::Schema.define(version: 20140412165214) do
   enable_extension "plpgsql"
 
   create_table "stats", force: true do |t|
-    t.integer "height"
     t.integer "weight"
     t.integer "age"
     t.string  "location"
-    t.binary  "gender"
   end
 
 end

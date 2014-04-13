@@ -9,7 +9,7 @@ $(document).ready(function(){
     var latitudeAdjuster = Math.cos(latitude * 0.01745);
     }
   else {
-    var latitudeAdjuster = 1
+    var latitudeAdjuster = 1;
   }
 
   var energyCalculation = function(mass, velocity){
@@ -19,7 +19,8 @@ $(document).ready(function(){
   };
 
   var joulesToGallonOfGas = function(energy) {
-    return energy / 1.3 * Math.pow(10, 8);
+    blah = (energy / 1.3 * Math.pow(10, 8));
+    return blah = roundTo(blah,4);
   };
 
   var joulesToAABattery = function(energy) {
