@@ -1,12 +1,13 @@
 <h1>STARCHILD</h1>
 <h2>Body + Universe <span id="equals">=</span> Awesome</h2>
 <div id="contents_wrapper">
+	<h3>Enter your information and find out about your body in relation to the universe!</h3>
 	<div id="left_button" class="nav_button"><%= image_tag("white_left_arrow.png") %></div>
 	<div id="contents">
 		<%= form_tag("/stats/create", method: :post) do %>
-		  <%= text_field_tag :weight, rand(95..210), placeholder: "Weight" %><br>
-		  <%= text_field_tag :age, rand(1..50), placeholder: "age" %><br>
-		  <%= text_field_tag :location, "Chicago, IL", placeholder: "Location" %><br>   
+		  <%= text_field_tag :weight, nil, placeholder: "Weight" %><br>
+		  <%= text_field_tag :age, nil, placeholder: "age" %><br>
+		  <%= text_field_tag :location, nil, placeholder: "Location" %><br>   
 		  <%= submit_tag("Show my star stats!", id: "submit")%><br>
 		<% end %>
 	</div>
