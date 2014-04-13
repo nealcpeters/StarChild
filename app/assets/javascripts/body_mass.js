@@ -19,8 +19,7 @@ $(document).ready(function(){
   };
 
   var joulesToGallonOfGas = function(energy) {
-    blah = (energy / 1.3 * Math.pow(10, 8));
-    return blah = roundTo(blah,4);
+    return round(energy / 1.3 * Math.pow(10, 8));
   };
 
   var joulesToAABattery = function(energy) {
