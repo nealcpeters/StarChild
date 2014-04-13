@@ -1,6 +1,4 @@
-$(document).ready(function(){
-
-  var elementalCompositionHumanBody = {
+  elementalCompositionHumanBody = {
     H : 0.1 ,
     C : 0.18,
     N : 0.3,
@@ -15,7 +13,7 @@ $(document).ready(function(){
     Fe : 0.0005
   };
 
-  var elementalCompositionMilkyWay = {
+  elementalCompositionMilkyWay = {
     H : 0.74 ,
     He : 0.24,
     C : 0.004,
@@ -28,7 +26,7 @@ $(document).ready(function(){
     S : 0.0004
   };
 
-  var elementalCompositionEarth = {
+  elementalCompositionEarth = {
     Fe : 0.32,
     O : 0.30,
     Si : 0.15,
@@ -48,8 +46,21 @@ $(document).ready(function(){
     Ne : 0.001
   };
 
-  var mgPercentageEarth = elementalCompositionHumanBody.Mg / elementalCompositionEarth.Mg * 100 //Percentage
-    $('#mgPercentageEarth').find('p').text(mgPercentageEarth + "%");  
+$(document).ready(function(){
+
+  var percentSetter = function(element, location) {
+    upCased = element.charAt(0).toUpperCase() + element.charAt(1)
+    store = elementalCompositionHumanBody[upCased] / window["elementalComposition" + location][upCased] * 100
+    console.log(elementalCompositionHumanBody[upCased]/window["elementalComposition" + location][upCased] * 100)
+    $('#' + element + 'Percentage' + location).find('p').text(store + "%");
+  };
+
+  percentSetter("mg", "Earth")
+  percentSetter("mg", "Earth")
+  percentSetter("mg", "Earth")
+
+  // var mgPercentageEarth = elementalCompositionHumanBody.Mg / elementalCompositionEarth.Mg * 100 //Percentage
+  //   $('#mgPercentageEarth').find('p').text(mgPercentageEarth + "%");
 
   var sPercentageEarth = elementalCompositionHumanBody.S / elementalCompositionEarth.S * 100 //Percentage
       $('#sPercentageEarth').find('p').text(sPercentageEarth + "%");  
@@ -68,7 +79,6 @@ $(document).ready(function(){
 
   var fePercentageMilkyWay = elementalCompositionHumanBody.Fe / elementalCompositionMilkyWay.Fe  * 100 // Percentage
     $('#fePercentageMilkyWay').find('p').text(fePercentageMilkyWay + "%");  
-
   
   var oTimesEarth = elementalCompositionHumanBody.O / elementalCompositionEarth.O  //Times
     $('#oTimesEarth').find('p').text(oTimesEarth + " times more");  
