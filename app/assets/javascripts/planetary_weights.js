@@ -1,3 +1,5 @@
+// This calculates user weight by the relative weight on other planets
+
 relativeWeights = {
   Mercury : 0.38,
   Venus : 0.90,
