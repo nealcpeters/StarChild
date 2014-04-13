@@ -2,9 +2,9 @@
 <div id="left_button" class="nav_button"><%= image_tag("left_arrow.png") %></div>
 <div id="contents">
 	<%= form_tag("/stats/create", method: :post) do %>
-	  <%= text_field_tag :weight, "140", placeholder: "Weight" %><br>
-	  <%= text_field_tag :age, "30", placeholder: "age" %><br>
-	  <%= text_field_tag :location, "Eau Claire, WI", placeholder: "Location" %><br>  
+	  <%= text_field_tag :weight, rand(95..210), placeholder: "Weight" %><br>
+	  <%= text_field_tag :age, rand(1..50), placeholder: "age" %><br>
+	  <%= text_field_tag :location, "Chicago, Il", placeholder: "Location" %><br>  
 	  <%= submit_tag("MAKE ME STARSTUFF!")%><br>
 	<% end %>
 </div>
