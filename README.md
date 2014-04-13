@@ -4,10 +4,10 @@
 
 ###Contributors:
 
-#####Eric Stensland
-#####Neal Peters
-#####Lauren Scott
+#####[Eric Stensland](https://github.com/estensland)
+#####[Neal Peters](https://github.com/nealcpeters)
+#####[Lauren Scott](https://github.com/devdame)
 #####Philip Lan
-#####Alex Wang
+#####[Alex Wang](https://github.com/alw231)
 #####Malynda Frouard
-#####Nicole McCabe
+#####[Nicole McCabe](https://github.com/bears8yourface)
