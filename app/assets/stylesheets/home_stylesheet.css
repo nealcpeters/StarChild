@@ -1,42 +1,50 @@
+/* THIS IS WHERE YOU PUT STYLING THAT APPLIES TO BOTH MOBILE AND DESKTOP:; */
 
-h1
-{
+h1 {
 	font-family: Pacifico;
 	text-align: center;
 }
-h2
-{
+
+h2 {
 	font-family: Nunito;
 	text-align: center;
 }
-h2
-{
+
+h2 {
 	font-family: Amatic SC;
 	text-align: center;
 }
-h3
-{
+
+h3 {
 	font-family: Trocchi;
 	text-align: center;
 }
-h4
-{
+
+h4 {
 	font-family: Sniglet;
 	text-align: center;
 }
-h5
-{
+
+h5 {
 	font-family: Sigmar One;
 	text-align: center;
 }
 
-#contents
-{
-	margin: 0;
-	text-align: center;
+@media (max-width: 45em) {
+    /* MOBILE STYLING GOES HERE */
 }
 
-.nav_button {
-	display: none;
-}
+@media (min-width: 45em) {
+    /* DESKTOP STYLING GOES HERE */
 
+    #contents {
+			width: 78%;
+			text-align: center;
+			margin: auto;
+		}
+
+		.nav_button {
+			display: inline-block;
+			width: 10%;
+		}
+}
