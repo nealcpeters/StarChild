@@ -48,57 +48,27 @@
 
 $(document).ready(function(){
 
-  var percentSetter = function(element, location) {
+  var viewSetter = function(element, location, type) {
     upCased = element.charAt(0).toUpperCase() + element.charAt(1)
     store = elementalCompositionHumanBody[upCased] / window["elementalComposition" + location][upCased] * 100
-    console.log(elementalCompositionHumanBody[upCased]/window["elementalComposition" + location][upCased] * 100)
-    $('#' + element + 'Percentage' + location).find('p').text(store + "%");
+    if (type === "Percent"){end = "%"}
+      else{end = " Times More"};    
+    $('#' + element + type + location).find('p').text(store + end);
   };
 
-  percentSetter("mg", "Earth")
-  percentSetter("mg", "Earth")
-  percentSetter("mg", "Earth")
-
-  // var mgPercentageEarth = elementalCompositionHumanBody.Mg / elementalCompositionEarth.Mg * 100 //Percentage
-  //   $('#mgPercentageEarth').find('p').text(mgPercentageEarth + "%");
-
-  var sPercentageEarth = elementalCompositionHumanBody.S / elementalCompositionEarth.S * 100 //Percentage
-      $('#sPercentageEarth').find('p').text(sPercentageEarth + "%");  
+  viewSetter("mg", "Earth", "Percent")
+  viewSetter("s", "Earth", "Percent")
+  viewSetter("ca", "Earth", "Percent")
+  viewSetter("fe", "Earth", "Percent")
+  viewSetter("h", "SolarSystem", "Percent")
+  viewSetter("h", "MilkyWay", "Percent")
+  viewSetter("fe", "MilkyWay", "Percent")
   
-  var caPercentageEarth = elementalCompositionHumanBody.Ca / elementalCompositionEarth.Ca * 100 //Percentage
-      $('#caPercentageEarth').find('p').text(caPercentageEarth + "%");  
-
-  var fePercentageEarth = elementalCompositionHumanBody.Fe / elementalCompositionEarth.Fe  * 100 // Percentage
-    $('#fePercentageEarth').find('p').text(fePercentageEarth + "%");  
-
-  var hPercentageSolarSystem = elementalCompositionHumanBody.H / elementalCompositionSolarSystem.H * 100 //Percentage
-   $('#hPercentageSolarSystem').find('p').text(hPercentageSolarSystem + "%");
-
-  var hPercentageMilkyWay = elementalCompositionHumanBody.H / elementalCompositionMilkyWay.H * 100 //Percentage
-   $('#hPercentageMilkyWay').find('p').text(hPercentageMilkyWay + "%");
-
-  var fePercentageMilkyWay = elementalCompositionHumanBody.Fe / elementalCompositionMilkyWay.Fe  * 100 // Percentage
-    $('#fePercentageMilkyWay').find('p').text(fePercentageMilkyWay + "%");  
-  
-  var oTimesEarth = elementalCompositionHumanBody.O / elementalCompositionEarth.O  //Times
-    $('#oTimesEarth').find('p').text(oTimesEarth + " times more");  
-   
-  var cTimesSolarSystem = elementalCompositionHumanBody.C / elementalCompositionSolarSystem.C  //Times
-    $('#cTimesSolarSystem').find('p').text(cTimesSolarSystem + " times more");  
-
-  var nTimesSolarSystem = elementalCompositionHumanBody.N / elementalCompositionSolarSystem.N //Times
-    $('#nTimesSolarSystem').find('p').text(nTimesSolarSystem + " times more");  
-
-  var oTimesSolarSystem = elementalCompositionHumanBody.O / elementalCompositionSolarSystem.O  //Times
-    $('#oTimesSolarSystem').find('p').text(oTimesSolarSystem + " times more");  
-
-  var cTimesMilkyWay = elementalCompositionHumanBody.C / elementalCompositionMilkyWay.C  //Times
-    $('#cTimesMilkyWay').find('p').text(cTimesMilkyWay + " times more");  
-  
-  var nTimesMilkyWay = elementalCompositionHumanBody.N / elementalCompositionMilkyWay.N  //Times
-    $('#nTimesMilkyWay').find('p').text(nTimesMilkyWay + " times more");  
-
-  var oTimesMilkyWay = elementalCompositionHumanBody.O / elementalCompositionMilkyWay.O  //Times
-    $('#oTimesMilkyWay').find('p').text(oTimesMilkyWay + " times more");  
-
+  viewSetter("o", "Earth", "Times")
+  viewSetter("c", "SolarSystem", "Times")
+  viewSetter("n", "SolarSystem", "Times")
+  viewSetter("o", "SolarSystem", "Times")
+  viewSetter("c", "MilkyWay", "Times")
+  viewSetter("n", "MilkyWay", "Times")
+  viewSetter("o", "MilkyWay", "Times")
 })
