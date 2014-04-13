@@ -1,3 +1,42 @@
+
+h1
+{
+	font-family: Pacifico;
+	text-align: center;
+}
+h2
+{
+	font-family: Nunito;
+	text-align: center;
+}
+h2
+{
+	font-family: Amatic SC;
+	text-align: center;
+}
+h3
+{
+	font-family: Trocchi;
+	text-align: center;
+}
+h4
+{
+	font-family: Sniglet;
+	text-align: center;
+}
+h5
+{
+	font-family: Sigmar One;
+	text-align: center;
+}
+
+#contents
+{
+	margin: 0;
+	text-align: center;
+}
+
 .nav_button {
 	display: none;
 }
+
