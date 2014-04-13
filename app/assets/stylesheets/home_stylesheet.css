@@ -26,16 +26,6 @@ h3 {
 	text-align: center;
 }
 
-h4 {
-	font-family: Sniglet;
-	text-align: center;
-}
-
-h5 {
-	font-family: Sigmar One;
-	text-align: center;
-}
-
 #equals {
 	font-family: helvetica, sans-serif;
 	font-weight: normal;
@@ -72,7 +62,7 @@ input {
 	  #contents {
 			width: 95%;
 			text-align: center;
-			margin: 0 5%;
+			margin: 0 2.5%;
 		}
 }
 
@@ -85,6 +75,24 @@ input {
 		h2 {
 			font-size: 1.2em;
 		}
+}
+
+@media (max-width: 995px) {
+	.nav_button img {
+		width: 9.9%;
+		height: auto;
+	}
+}
+
+#make_your_own {
+	display: inline-block;
+	background: #242424;
+	margin-top: 15px;
+	background: #242424;
+	padding: 3px 12px;
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
 }
 
 @media (max-width: 300px) {
@@ -102,7 +110,7 @@ input {
     /* DESKTOP STYLING GOES HERE */
 
     #contents {
-			width: 78%;
+			width: 79%;
 			text-align: center;
 			margin: auto;
 		}
@@ -111,6 +119,8 @@ input {
 			position: fixed;
 			top: 40%;
 			height: 100px;
+			margin: 0;
+			padding: 0;
 		}
 
 		#contents_wrapper {

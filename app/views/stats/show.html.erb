@@ -1,33 +1,42 @@
-<h1>Your Results</h1>
+<h1>STARCHILD</h1>
+<h3>Here are some statistics we made, floop de doo!</h3>
 
-<div>
-  weight: <span id="weight"><%= @stats.weight %></span>
+<div id="base_results">
+	<div>
+	  weight: <span id="weight"><%= @stats.weight %></span>
+	</div>
+
+	<div>
+	  age: <span id="age"><%= @stats.age %></span>
+	</div>
+
+	<div>
+	  location: <span id="location"><%= @stats.location %></span>
+	</div>
+
 </div>
 
-<div>
-  age: <span id="age"><%= @stats.age %></span>
+<div id="show_results">
+	<div id="earth_rotating">
+	  <%= render partial: ('energy_cause_earth_rotates') %>
+	</div>
+
+	<div id="earth_orbiting">
+	  <%= render partial: ('energy_cause_earth_orbits') %>
+	</div>
+
+	<div id="sun_orbiting">
+	  <%= render partial: ('energy_cause_sun_orbits') %>
+	</div>
+
+	<div id="comparisons">
+	  <%= render partial: ('composition_comparisons') %>
+	</div>
+
+	<div id="planetary_ages">
+	  <%= render partial: ('planetary_age') %>
+	</div>
 </div>
 
-<div>
-  location: <span id="location"><%= @stats.location %></span>
-</div>
-
-<div id="earth_rotating">
-  <%= render partial: ('energy_cause_earth_rotates') %>
-</div>
-
-<div id="earth_orbiting">
-  <%= render partial: ('energy_cause_earth_orbits') %>
-</div>
-
-<div id="sun_orbiting">
-  <%= render partial: ('energy_cause_sun_orbits') %>
-</div>
-
-<div id="comparisons">
-  <%= render partial: ('composition_comparisons') %>
-</div>
-
-<div id="planetary_ages">
-  <%= render partial: ('planetary_age') %>
-</div>
+<h3>Want in on the action?</h3>
+<a href="/"><div id="make_your_own"><p>Generate your own star stats!</p></div></a>
