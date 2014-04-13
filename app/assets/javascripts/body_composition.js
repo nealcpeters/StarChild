@@ -5,9 +5,9 @@ $(document).ready(function(){
     C : 0.18,
     N : 0.3,
     O : 0.65,
-    Na : 0.001, //need traces 
-    K : 0.002, //need traces 
-    P : 0.012, //need traces 
+    Na : 0.001,
+    K : 0.002,
+    P : 0.012,
     Mg : 0.0005,
     S : 0.002,
     Cl : 0.002,
@@ -48,9 +48,6 @@ $(document).ready(function(){
     Ne : 0.001
   };
 
-
-
-
   var mgPercentageEarth = elementalCompositionHumanBody.Mg / elementalCompositionEarth.Mg * 100 //Percentage
     $('#mgPercentageEarth').find('p').text(mgPercentageEarth + "%");  
 
@@ -72,11 +69,6 @@ $(document).ready(function(){
   var fePercentageMilkyWay = elementalCompositionHumanBody.Fe / elementalCompositionMilkyWay.Fe  * 100 // Percentage
     $('#fePercentageMilkyWay').find('p').text(fePercentageMilkyWay + "%");  
 
-  var earthPercents = ["mg", "s", "ca", "fe"]
-  var solarSystemPercents = ["h"]
-  var milkyWayPercents = ["h", "fe"]
-  
-  var earthTimes = ["o"]
   
   var oTimesEarth = elementalCompositionHumanBody.O / elementalCompositionEarth.O  //Times
     $('#oTimesEarth').find('p').text(oTimesEarth + " times more");  
@@ -98,4 +90,5 @@ $(document).ready(function(){
 
   var oTimesMilkyWay = elementalCompositionHumanBody.O / elementalCompositionMilkyWay.O  //Times
     $('#oTimesMilkyWay').find('p').text(oTimesMilkyWay + " times more");  
+
 })
