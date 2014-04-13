@@ -5,9 +5,9 @@ $(document).ready(function(){
     C : 0.18,
     N : 0.3,
     O : 0.65,
-    Na : 0.001, //need traces 
-    K : 0.002, //need traces 
-    P : 0.012, //need traces 
+    Na : 0.001,
+    K : 0.002,
+    P : 0.012,
     Mg : 0.0005,
     S : 0.002,
     Cl : 0.002,
@@ -48,41 +48,47 @@ $(document).ready(function(){
     Ne : 0.001
   };
 
-  var hPercentageMilkyWay = elementalCompositionHumanBody.H / elementalCompositionMilkyWay.H * 100 //Percentage
-   $('#hPercentageMilkyWay').find('p').text(hPercentageMilkyWay + "%");
-  var hPercentageSolarSystem = elementalCompositionHumanBody.H / elementalCompositionSolarSystem.H * 100 //Percentage
-   $('#hPercentageSolarSystem').find('p').text(hPercentageSolarSystem + "%");
-
-  var cTimesMilkyWay = elementalCompositionHumanBody.C / elementalCompositionMilkyWay.C  //Times
-    $('#cTimesMilkyWay').find('p').text(cTimesMilkyWay + " times more");  
-  var cTimesSolarSystem = elementalCompositionHumanBody.C / elementalCompositionSolarSystem.C  //Times
-    $('#cTimesSolarSystem').find('p').text(cTimesSolarSystem + " times more");  
-  
-  var nTimesMilkyWay = elementalCompositionHumanBody.N / elementalCompositionMilkyWay.N  //Times
-    $('#nTimesMilkyWay').find('p').text(nTimesMilkyWay + " times more");  
-
-  var nTimesSolarSystem = elementalCompositionHumanBody.N / elementalCompositionSolarSystem.N //Times
-    $('#nTimesSolarSystem').find('p').text(nTimesSolarSystem + " times more");  
-
-  var oTimesMilkyWay = elementalCompositionHumanBody.O / elementalCompositionMilkyWay.O  //Times
-    $('#oTimesMilkyWay').find('p').text(oTimesMilkyWay + " times more");  
-  var oTimesSolarSystem = elementalCompositionHumanBody.O / elementalCompositionSolarSystem.O  //Times
-    $('#oTimesSolarSystem').find('p').text(oTimesSolarSystem + " times more");  
-  var oTimesEarth = elementalCompositionHumanBody.O / elementalCompositionEarth.O  //Times
-    $('#oTimesEarth').find('p').text(oTimesEarth + " times more");  
- 
   var mgPercentageEarth = elementalCompositionHumanBody.Mg / elementalCompositionEarth.Mg * 100 //Percentage
     $('#mgPercentageEarth').find('p').text(mgPercentageEarth + "%");  
 
   var sPercentageEarth = elementalCompositionHumanBody.S / elementalCompositionEarth.S * 100 //Percentage
       $('#sPercentageEarth').find('p').text(sPercentageEarth + "%");  
-
+  
   var caPercentageEarth = elementalCompositionHumanBody.Ca / elementalCompositionEarth.Ca * 100 //Percentage
       $('#caPercentageEarth').find('p').text(caPercentageEarth + "%");  
-  // Divide your composition of things by the others to figure out how much more or less percent you have
+
+  var fePercentageEarth = elementalCompositionHumanBody.Fe / elementalCompositionEarth.Fe  * 100 // Percentage
+    $('#fePercentageEarth').find('p').text(fePercentageEarth + "%");  
+
+  var hPercentageSolarSystem = elementalCompositionHumanBody.H / elementalCompositionSolarSystem.H * 100 //Percentage
+   $('#hPercentageSolarSystem').find('p').text(hPercentageSolarSystem + "%");
+
+  var hPercentageMilkyWay = elementalCompositionHumanBody.H / elementalCompositionMilkyWay.H * 100 //Percentage
+   $('#hPercentageMilkyWay').find('p').text(hPercentageMilkyWay + "%");
 
   var fePercentageMilkyWay = elementalCompositionHumanBody.Fe / elementalCompositionMilkyWay.Fe  * 100 // Percentage
     $('#fePercentageMilkyWay').find('p').text(fePercentageMilkyWay + "%");  
-  var fePercentageEarth = elementalCompositionHumanBody.Fe / elementalCompositionEarth.Fe  * 100 // Percentage
-  $('#fePercentageEarth').find('p').text(fePercentageEarth + "%");  
+
+  
+  var oTimesEarth = elementalCompositionHumanBody.O / elementalCompositionEarth.O  //Times
+    $('#oTimesEarth').find('p').text(oTimesEarth + " times more");  
+   
+  var cTimesSolarSystem = elementalCompositionHumanBody.C / elementalCompositionSolarSystem.C  //Times
+    $('#cTimesSolarSystem').find('p').text(cTimesSolarSystem + " times more");  
+
+  var nTimesSolarSystem = elementalCompositionHumanBody.N / elementalCompositionSolarSystem.N //Times
+    $('#nTimesSolarSystem').find('p').text(nTimesSolarSystem + " times more");  
+
+  var oTimesSolarSystem = elementalCompositionHumanBody.O / elementalCompositionSolarSystem.O  //Times
+    $('#oTimesSolarSystem').find('p').text(oTimesSolarSystem + " times more");  
+
+  var cTimesMilkyWay = elementalCompositionHumanBody.C / elementalCompositionMilkyWay.C  //Times
+    $('#cTimesMilkyWay').find('p').text(cTimesMilkyWay + " times more");  
+  
+  var nTimesMilkyWay = elementalCompositionHumanBody.N / elementalCompositionMilkyWay.N  //Times
+    $('#nTimesMilkyWay').find('p').text(nTimesMilkyWay + " times more");  
+
+  var oTimesMilkyWay = elementalCompositionHumanBody.O / elementalCompositionMilkyWay.O  //Times
+    $('#oTimesMilkyWay').find('p').text(oTimesMilkyWay + " times more");  
+
 })
