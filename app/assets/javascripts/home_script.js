@@ -27,17 +27,19 @@ $(document).ready(function(){
 	enquire.register("screen and (max-width:45em)", {
 
     match : function() {
-    	$(window).on("swipeleft", function(event){
-        nextDiv();
-    	});
+      desktop = undefined;
     	$(window).on("swiperight", function(event){
-        previousDiv();
+        nextDivMobile();
+    	});
+    	$(window).on("swipeleft", function(event){
+        previousDivMobile();
     	});
     },
                                 
     unmatch : function() {
     	if($(".active").first().attr("id")){
-        $(".nav_button").toggle();
+        $(".nav_button").toggle()
+        $("#left_button > img").css("display", "none");
       };
     	$(window).unbind("swipeleft");
     	$(window).unbind("swiperight");
@@ -48,11 +50,11 @@ $(document).ready(function(){
 
     match : function() {
       desktop = "true";
-      $("#left_button").on("click", function(event){
-        previousDiv();
+      $("#left_button > img").on("click", function(event){
+        previousDivDesktop();
       });
-      $("#right_button").on("click", function(event){
-        nextDiv();
+      $("#right_button > img").on("click", function(event){
+        nextDivDesktop();
       });
 
     },
@@ -66,10 +68,35 @@ $(document).ready(function(){
   function showNavIfDesktop(){
     if(desktop){
       $(".nav_button").toggle()
+      $("#left_button > img").css("display", "none");
     };
   };
 
-  function nextDiv(){
+  function previousDivDesktop(){
+    if($(".active").first().attr("id") != $("#contents .main_div:nth-child(2)").attr("id")){
+      $(".nav_button > img").css("display", "inline-block")
+      $(".active").toggle();
+      $(".active").removeClass("active").prev().addClass("active");
+      $(".active").toggle();
+    }
+    if($(".active").first().attr("id") == $("#contents .main_div:nth-child(2)").attr("id")){
+      $("#left_button > img").css("display", "none")
+    };
+  };
+
+  function nextDivDesktop(){
+    if($(".active").first().next().attr("id") != $("#contents").last().attr("id")){
+      $(".nav_button > img").css("display", "inline-block"),
+      $(".active").toggle();
+      $(".active").removeClass("active").next().addClass("active");
+      $(".active").toggle();
+    }
+    if($(".active").first().attr("id") == $("#contents").find(".main_div").last().attr("id")){
+      $("#right_button > img").css("display", "none")
+    };
+  };
+
+  function previousDivMobile(){
     if($(".active").first().attr("id") != $("#contents .main_div:nth-child(2)").attr("id")){
       $(".active").toggle();
       $(".active").removeClass("active").prev().addClass("active");
@@ -77,8 +104,8 @@ $(document).ready(function(){
     };
   };
 
-  function previousDiv(){
-    if($(".active").first().attr("id") != $("#contents").find(".main_div").last().attr("id")){
+  function nextDivMobile(){
+    if($(".active").first().attr("id") != $("#contents").children().last().attr("id")){
       $(".active").toggle();
       $(".active").removeClass("active").next().addClass("active");
       $(".active").toggle();

@@ -30,8 +30,33 @@ h5 {
 	text-align: center;
 }
 
+.nav_button {
+	display: inline-block;
+	width: 10%;
+	height: 100%;
+}
+
 @media (max-width: 45em) {
-    /* MOBILE STYLING GOES HERE */
+    /* MOBILE AND TABLET STYLING GOES HERE */
+	  #contents {
+			width: 95%;
+			text-align: center;
+			margin: auto;
+		}
+}
+
+@media (max-width: 410px) {
+	/* SMALLER H1 SIZE FOR SMALLER MOBILE SCREENS */
+		h1 {
+			font-size: 1.6em;
+		}
+}
+
+@media (max-width: 300px) {
+	/* EVEN SMALLER H1 SIZE FOR EVEN SMALLER MOBILE SCREENS */
+		h1 {
+			font-size: 1.2em;
+		}
 }
 
 @media (min-width: 45em) {
@@ -43,8 +68,8 @@ h5 {
 			margin: auto;
 		}
 
-		.nav_button {
-			display: inline-block;
-			width: 10%;
+		.nav_button img {
+			position: fixed;
+			top: 40%;
 		}
 }

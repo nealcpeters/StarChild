@@ -1,5 +1,5 @@
 <h1>Body + Universe = Awesome</h1>
-<div id="right_button" class="nav_button">previous</div>
+<div id="left_button" class="nav_button"><%= image_tag("left_arrow.png") %></div>
 <div id="contents">
 	<%= form_tag("/stats/create", method: :post) do %>
 	  <%= text_field_tag :weight, rand(95..210), placeholder: "Weight" %><br>
@@ -8,4 +8,4 @@
 	  <%= submit_tag("MAKE ME STARSTUFF!")%><br>
 	<% end %>
 </div>
-<div id="left_button" class="nav_button">next</div>
+<div id="right_button" class="nav_button"><%= image_tag("right_arrow.png") %></div>
