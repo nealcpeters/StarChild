@@ -6,8 +6,8 @@
 		<%= form_tag("/stats/create", method: :post) do %>
 		  <%= text_field_tag :weight, rand(95..210), placeholder: "Weight" %><br>
 		  <%= text_field_tag :age, rand(1..50), placeholder: "age" %><br>
-		  <%= text_field_tag :location, "Chicago, Il", placeholder: "Location" %><br>   
-		  <%= submit_tag("Make me starstuff!", id: "submit")%><br>
+		  <%= text_field_tag :location, "Chicago, IL", placeholder: "Location" %><br>   
+		  <%= submit_tag("Show my star stats!", id: "submit")%><br>
 		<% end %>
 	</div>
 	<div id="right_button" class="nav_button"><%= image_tag("white_right_arrow.png") %></div>
