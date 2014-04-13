@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $(".nav_button").toggle();
+
 	$("form").on("submit", function(event){
 	  event.preventDefault();
 	  var height = $("input[name='height']").val();
@@ -13,6 +15,7 @@ $(document).ready(function(){
       data: $("form").serialize(),
       success: function(response) {
       	$("#contents").html(response);
+        $("#contents").css("display", "inline-block");
       	$("#contents").children().toggle();
         console.log(response);
         $("#contents .main_div:nth-child(2)").addClass("active");
