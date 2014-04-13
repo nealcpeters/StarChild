@@ -9,7 +9,7 @@ $(document).ready(function(){
     var latitudeAdjuster = Math.cos(latitude * 0.01745);
     }
   else {
-    var latitudeAdjuster = 1
+    var latitudeAdjuster = 1;
   }
 
   var energyCalculation = function(mass, velocity){
