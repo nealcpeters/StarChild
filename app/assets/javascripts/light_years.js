@@ -2,5 +2,4 @@ var lightYears = [0, 0, 0, 0, 3, 3, 4, 5, 9, 10, 16, 30, 37, 44, 56, 63, 72, 82,
 
 var age = $('#age').text();
 
-console.log("boo")
 $('#lifeStarRange').text(lightYears[parseInt($('#age').text())] + " stars")

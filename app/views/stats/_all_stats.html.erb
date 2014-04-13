@@ -1,15 +1,6 @@
 <div id="base_results">
 	<div>
-	  height: <span id="height"><%= @stats.height %></span>
-	</div>
-
-	<div>
 	  weight: <span id="weight"><%= @stats.weight %></span>
-	</div>
-
-	<div>
-	  <%= "gender: Male" if @stats.gender == "0" %>
-	  <%= "gender: Female" if @stats.gender == "1" %>
 	</div>
 
 	<div>
@@ -20,9 +11,6 @@
 	  location: <span id="location"><%= @stats.location %></span>
 	</div>
 
-	<div>
-	  location: <span id="age"><%= @stats.location %></span>
-	</div>
 </div>
 
 <div id="planetary_age" class="main_div">
@@ -31,6 +19,10 @@
 
 <div id="life_star_range" class="main_div">
 	<%= render partial: "stars_in_life_range" %>
+</div>
+
+<div id="plantary_weights" class="main_div">
+	<%= render partial: "planetary_weights" %>
 </div>
 
 <div id="energy_cause_earth_rotates" class="main_div">
