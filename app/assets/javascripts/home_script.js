@@ -55,6 +55,7 @@ $(document).ready(function(){
     },
                                 
     unmatch : function() {
+      desktop = undefined;
       $(".nav_button").css("display", "none");
     }       
   });
