@@ -15,6 +15,7 @@ $(document).ready(function(){
       data: $("form").serialize(),
       success: function(response) {
         $("#contents").html(response);
+        $("#instructions").toggle();
         $("#contents").css("display", "inline-block");
         $("#contents").children().toggle();
         $("#contents .main_div:nth-child(2)").addClass("active");
@@ -23,6 +24,11 @@ $(document).ready(function(){
       }
     });
   });
+
+  $(document).on("click", ".find_out_more", function(event){
+    $(".active > .find_out_more").toggle();
+    $(".active > .additional_info").toggle();
+  })
 
   enquire.register("screen and (max-width:45em)", {
 
