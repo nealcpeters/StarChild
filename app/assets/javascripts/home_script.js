@@ -52,9 +52,15 @@ $(document).ready(function(){
       desktop = "true";
       $(document).keydown(function(e){
         if (e.keyCode == 37) {
-          previousDivDesktop();
+          if($(".active").first().attr("id") != $("#contents .main_div:nth-child(2)").attr("id"))
+          {
+            previousDivDesktop();
+          }
         } else if (e.keyCode == 39) {
-          nextDivDesktop();
+          if($(".active").first().attr("id") != $("#contents").find(".main_div").last().attr("id"))
+          {
+            nextDivDesktop();
+          }
         }
       });
 
