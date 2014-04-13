@@ -1,3 +1,5 @@
+// This calculates user weight by the relative weight on other planets
+
 relativeWeights = {
   Mercury : 0.38,
   Venus : 0.90,
@@ -12,7 +14,7 @@ relativeWeights = {
 var weight = $('#weight').text();
 
 for (var key in relativeWeights) {
-  var replacement = (weight * relativeWeights[key]).toFixed(1);
+  var weightMultiplier = relativeWeights[key];
+  var replacement = (weight * weightMultiplier).toFixed(1);
   $('#' + key.toLowerCase() + 'Weight').text(key + " " + replacement +"lbs");
 }
-
