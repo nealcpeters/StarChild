@@ -9,23 +9,23 @@
   };
 
   var joulesToAABattery = function(energy) {
-    return energy / 1000;
+    return (energy / 1000).toFixed(2);
   };
 
   var joulesToCandyBar = function(energy) {
-    return energy / 1000000;
+    return (energy / 1000000).toFixed(2);
   };
 
   var joulesToKgOfCoal = function(energy) {
-    return energy / 7.3 * Math.pow(10,6);
+    return (energy / 7.3 * Math.pow(10,6)).toFixed(2);
   };
 
   var joulesToKgOfUranium = function(energy) {
-    return energy / 1.7 * Math.pow(10,13);
+    return (energy / 1.7 * Math.pow(10,13)).toFixed(2);
   };
 
   var joulesToFoodCalories = function(energy) {
-    return energy / 4184;
+    return (energy / 4184).toFixed(2);
   };
 
   var joulesToHiroshima = function(energy) {
@@ -41,11 +41,11 @@
   };
 
   var joulesToKgOfTNT = function(energy) {
-    return energy / Math.pow(10,6);
+    return (energy / Math.pow(10,6)).toFixed(2);
   };
 
   var joulesToHoppingFlea = function(energy) {
-    return energy / Math.pow(10,-7);
+    return (energy / Math.pow(10,-7)).toFixed(2);
   };
 
 $(document).ready(function(){
