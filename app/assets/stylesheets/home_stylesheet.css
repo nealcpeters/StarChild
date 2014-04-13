@@ -53,6 +53,15 @@ input {
 	box-shadow: 0px 0px 20px #ffa07a;
 }
 
+#show_page_stats {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#show_page_stats #base_results {
+	display: none;
+}
+
 @media (max-width: 45em) {
     /* MOBILE AND TABLET STYLING GOES HERE */
 	  #contents {
@@ -89,6 +98,21 @@ input {
 	color: white;
 	border: 1px solid white;
 	border-radius: 5px;
+}
+
+#my_stat_link {
+	display: inline-block;
+	background: #242424;
+	margin-top: 15px;
+	background: #242424;
+	padding: 3px 12px;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+#my_stat_link a {
+	color: white;
+	text-decoration: none;
 }
 
 @media (max-width: 300px) {
