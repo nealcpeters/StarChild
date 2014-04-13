@@ -1,18 +1,24 @@
 /* THIS IS WHERE YOU PUT STYLING THAT APPLIES TO BOTH MOBILE AND DESKTOP:; */
 
+body {
+	color: white;
+	background-image: url('stardust.png');
+	font-family: 'Muli', sans-serif;
+}
+
 h1 {
+	font-family: 'craftopia_starsregular';
+	text-align: center;
+	font-size: 3.8em;
+	margin-bottom: 0;
+	font-weight: normal;
+}
+
+h2 {
+	margin-top: 0;
 	font-family: Pacifico;
 	text-align: center;
-}
-
-h2 {
-	font-family: Nunito;
-	text-align: center;
-}
-
-h2 {
-	font-family: Amatic SC;
-	text-align: center;
+	font-weight: normal;
 }
 
 h3 {
@@ -30,10 +36,35 @@ h5 {
 	text-align: center;
 }
 
+#equals {
+	font-family: helvetica, sans-serif;
+	font-weight: normal;
+}
+
 .nav_button {
 	display: inline-block;
 	width: 10%;
 	height: 100%;
+}
+
+form {
+
+}
+
+input {
+	margin-bottom: 10px;
+	box-shadow: 5px 5px 20px black;
+	color: black;
+}
+
+#submit {
+	margin-top: 15px;
+	background: #242424;
+	padding: 12px;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 20px #ffa07a;
 }
 
 @media (max-width: 45em) {
@@ -41,21 +72,29 @@ h5 {
 	  #contents {
 			width: 95%;
 			text-align: center;
-			margin: auto;
+			margin: 0 5%;
 		}
 }
 
-@media (max-width: 410px) {
+@media (max-width: 420px) {
 	/* SMALLER H1 SIZE FOR SMALLER MOBILE SCREENS */
 		h1 {
-			font-size: 1.6em;
+			font-size: 2.9em;
+		}
+
+		h2 {
+			font-size: 1.2em;
 		}
 }
 
 @media (max-width: 300px) {
 	/* EVEN SMALLER H1 SIZE FOR EVEN SMALLER MOBILE SCREENS */
 		h1 {
-			font-size: 1.2em;
+			font-size: 2.2em;
+		}
+
+		h2 {
+			font-size: 1em;
 		}
 }
 
@@ -71,5 +110,10 @@ h5 {
 		.nav_button img {
 			position: fixed;
 			top: 40%;
+			height: 100px;
+		}
+
+		#contents_wrapper {
+			margin: auto;
 		}
 }
