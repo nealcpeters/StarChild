@@ -1,11 +1,14 @@
-<h1>Body + Universe = Awesome</h1>
-<div id="left_button" class="nav_button"><%= image_tag("left_arrow.png") %></div>
-<div id="contents">
-	<%= form_tag("/stats/create", method: :post) do %>
-	  <%= text_field_tag :weight, "140", placeholder: "Weight" %><br>
-	  <%= text_field_tag :age, "30", placeholder: "age" %><br>
-	  <%= text_field_tag :location, "Eau Claire, WI", placeholder: "Location" %><br>  
-	  <%= submit_tag("MAKE ME STARSTUFF!")%><br>
-	<% end %>
+<h1>STARCHILD</h1>
+<h2>Body + Universe <span id="equals">=</span> Awesome</h2>
+<div id="contents_wrapper">
+	<div id="left_button" class="nav_button"><%= image_tag("white_left_arrow.png") %></div>
+	<div id="contents">
+		<%= form_tag("/stats/create", method: :post) do %>
+		  <%= text_field_tag :weight, "140", placeholder: "Weight" %><br>
+		  <%= text_field_tag :age, "30", placeholder: "age" %><br>
+		  <%= text_field_tag :location, "Eau Claire, WI", placeholder: "Location" %><br>  
+		  <%= submit_tag("Make me starstuff!", id: "submit")%><br>
+		<% end %>
+	</div>
+	<div id="right_button" class="nav_button"><%= image_tag("white_right_arrow.png") %></div>
 </div>
-<div id="right_button" class="nav_button"><%= image_tag("right_arrow.png") %></div>
