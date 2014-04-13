@@ -37,10 +37,6 @@ h3 {
 	height: 100%;
 }
 
-form {
-
-}
-
 input {
 	margin-bottom: 10px;
 	box-shadow: 5px 5px 20px black;
@@ -123,7 +119,13 @@ input {
 			padding: 0;
 		}
 
+		#right_button img{
+			right: 1px;
+		}
+
 		#contents_wrapper {
+			display: block;
+			overflow: auto;
 			margin: auto;
 		}
 }
