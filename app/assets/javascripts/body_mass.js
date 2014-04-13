@@ -47,57 +47,46 @@
   var joulesToHoppingFlea = function(energy) {
     return (energy / Math.pow(10,-7)).toFixed(2);
   };
-// Energy of a person
 
 $(document).ready(function(){
 
   var weight = $('#weight').text();
   var mass = weight / 2.2;
   var latitude = $('#location').text().match(/\d*\.\d*/);
+  
   if(latitude === null) {
-    var latitudeAdjuster = Math.cos(latitude * 0.01745);
+    latitudeAdjuster = Math.cos(latitude * 0.01745);
     }
   else {
-    var latitudeAdjuster = 1;
+    latitudeAdjuster = 1;
   }
 
-
-  // Come back and add latitude
-  // 
   var earthRotating = energyCalculation(mass, 1600 * latitudeAdjuster);
 
   var earthOrbitingSun = energyCalculation(mass, 107000);
 
   var sunOrbitingGalaxy = energyCalculation(mass, 792000);
 
-  self = this
-
   var displaySet = function(functionName, endDescription, energySource, name){
     store = window[functionName](energySource);
     $('#' + functionName + name).find('p').text(store + " " + endDescription);
-  }
-
+  };
 
   var threeSet = function(functionName, endDescription){
-    displaySet(functionName, endDescription, earthRotating, "EarthRotating")
-    displaySet(functionName, endDescription, earthOrbitingSun, "EarthOrbiting")
-    displaySet(functionName, endDescription, sunOrbitingGalaxy, "SunOrbiting")  
-  }
+    displaySet(functionName, endDescription, earthRotating, "EarthRotating");
+    displaySet(functionName, endDescription, earthOrbitingSun, "EarthOrbiting");
+    displaySet(functionName, endDescription, sunOrbitingGalaxy, "SunOrbiting");
+  };
 
-  var aABatterySet = function(energySource, name) {
-    store = joulesToAABattery(energySource);
-    $('' + name).find('p').text(store + " AA Batteries");
-  }
-  
-  threeSet("joulesToGallonOfGas", "Gallons of Gas")
-  threeSet("joulesToAABattery", "AA Batteries")
-  threeSet("joulesToCandyBar", "Candy Bars")
-  threeSet("joulesToKgOfCoal", "Kilograms of Coal") 
-  threeSet("joulesToKgOfUranium", "Kilograms of Uranium") 
-  threeSet("joulesToFoodCalories", "Food Calories")     
-  threeSet("joulesToHiroshima", "Hiroshima Atom Bombs")  
-  threeSet("joulesToLighteningBolt", "Bolts of Lightening")     
-  threeSet("joulesToSaturnV", "Saturn V Rockets")          
-  threeSet("joulesToKgOfTNT", "Kilograms of TNT")          
-  threeSet("joulesToHoppingFlea", "Hopping Fleas")          
+  threeSet("joulesToGallonOfGas", "Gallons of Gas");
+  threeSet("joulesToAABattery", "AA Batteries");
+  threeSet("joulesToCandyBar", "Candy Bars");
+  threeSet("joulesToKgOfCoal", "Kilograms of Coal");
+  threeSet("joulesToKgOfUranium", "Kilograms of Uranium");
+  threeSet("joulesToFoodCalories", "Foord Calories");
+  threeSet("joulesToHiroshima", "Hiroshima Atom Bombs");
+  threeSet("joulesToLighteningBolt", "Bolts of Lightening");
+  threeSet("joulesToSaturnV", "Saturn V Rockets");
+  threeSet("joulesToKgOfTNT", "Kilograms of TNT");
+  threeSet("joulesToHoppingFlea", "Hopping Fleas");
  });
